@@ -29,7 +29,7 @@ spec:
     steps:
       - name: apply-server
         type: apply-component
-        properties: 
+        properties:
           component: my-server
         outputs:
           - name: server-status
