@@ -12,19 +12,22 @@ spec:
         secretRef: git-secret
         pullInterval: 1m
         git:
-          branch: main
+
+          ref: refs/heads/main
         path: ./argo
+
 
 ---
 apiVersion: v1
 kind: Secret
 metadata:
   name: git-secret
-  # # namespace: argocd
+  # namespace: default
   # labels:
   # argocd.argoproj.io/secret-type: repository
+type: kubernetes.io/basic-auth
 stringData:
   type: git
   url: https://github.com/Deepdelver/DeepsLab
-  password: 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
+  password: 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
   username: Deepdelver
