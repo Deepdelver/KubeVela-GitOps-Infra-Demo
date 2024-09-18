@@ -17,17 +17,4 @@ spec:
         path: ./argo
 
 
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: git-secret
-  # namespace: default
-  # labels:
-  # argocd.argoproj.io/secret-type: repository
-type: kubernetes.io/basic-auth
-stringData:
-  type: git
-  url: https://github.com/Deepdelver/DeepsLab
-  password: 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
-  username: Deepdelver
+
